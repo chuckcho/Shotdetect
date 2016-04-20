@@ -34,6 +34,11 @@ extern "C" {
 
 #define DEBUG
 
+// To be able to build with newer ffmpeg library
+#define avcodec_alloc_frame av_frame_alloc
+#define PIX_FMT_RGB24 AV_PIX_FMT_RGB24
+#define PIX_FMT_YUV444P AV_PIX_FMT_YUV444P
+
 int film::idfilm = 0;
 
 void film::do_stats(int frame_number) {
